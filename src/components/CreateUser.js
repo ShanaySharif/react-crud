@@ -1,15 +1,18 @@
 import { useState} from "react";
+import axios from "axios";
 
-export default function ListUser() {
+export default function CreateUser() {
 
     const [inputs, setInputs] = useState({})
     const handleChange = (event) => {
         const name = event.target.name;
-        const value = event.target.name;
-        setInputs(values => ({values, [name]: value}));
+        const value = event.target.value;
+        setInputs(values => ({...values, [name]: value}));
     }
     const handleSubmit = (event) => {
         event.preventDefault();
+        
+        console.log(inputs);
 
     }
     return (
@@ -35,12 +38,12 @@ export default function ListUser() {
 
         <tr>
             <th>
-            <label> Name:</label>
+            <label> Email:</label>
                 
 
                 </th>
                 <td>
-                <input type="text" name="name" />
+                <input type="text" name="email" onChange={handleChange}/>
 
 
             </td>
@@ -49,19 +52,13 @@ export default function ListUser() {
         <tr>
             <th>
             <label> Mobile: </label>
-                
-
                 </th>
                 <td>
-                <input type= "text" name= "name" />
-
-
+                <input type= "text" name= "mobile" onChange={handleChange} />
             </td>
-
         </tr>
         <tr>
-           
-                <td colspan="2" align ="right">
+                <td colSpan="2" align ="right">
                     
                 <button> Save </button>
 
