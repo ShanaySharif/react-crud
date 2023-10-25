@@ -3,8 +3,8 @@ import { BrowserRouter, Routes, Route, Link} from 'react-router-dom';
 
 import './App.css';
 import EditUser from './components/EditUser';
-import CreateUser from './components/CreateUser';
-import ListUser from './components/ListUser';
+import CreateUser from './components/ListUser';
+import ListUser from './components/CreateUser';
 
 function App() {
   return (

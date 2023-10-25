@@ -1,6 +1,6 @@
 export default function ListUser() {
     return (
-        <h>List Users</h>
+        <h1>List Users</h1>
 
     )
 }
