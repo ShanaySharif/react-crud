@@ -1,4 +1,17 @@
+import { useState} from "react";
+
 export default function ListUser() {
+
+    const [inputs, setInputs] = useState({})
+    const handleChange = (event) => {
+        const name = event.target.name;
+        const value = event.target.name;
+        setInputs(values => ({values, [name]: value}));
+    }
+    const handleSubmit = (event) => {
+        event.preventDefault();
+
+    }
     return (
         <div> 
             <h1>List Users</h1>
@@ -14,7 +27,7 @@ export default function ListUser() {
                 </th>
                 <td>
 
-                <input type="text" name="name" />
+                <input type="text" name="name" onChange={handleChange}/>
 
             </td>
 
