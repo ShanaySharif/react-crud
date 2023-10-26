@@ -12,6 +12,7 @@ export default function CreateUser() {
     const handleSubmit = (event) => {
         event.preventDefault();
         
+        axios.post('http://localhost:80/api/user/save', inputs);
         console.log(inputs);
 
     }
